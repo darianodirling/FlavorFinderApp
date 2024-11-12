@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">FlavorFinderApp</string>
+
+    <string name="home">Home</string>
+    <string name="favorites">Favorites</string>
+    <string name="login">Login</string>
+</resources>
