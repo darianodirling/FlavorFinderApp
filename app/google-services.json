@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "739299444842",
+    "project_id": "flavorfinderapp-1f3c1",
+    "storage_bucket": "flavorfinderapp-1f3c1.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:739299444842:android:eaea68cd713f7d99da2213",
+        "android_client_info": {
+          "package_name": "com.example.flavorfinderapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC1e_9G3uhylPXUjyqRJTZG_XaQqdVpvUM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+
 }
 
 android {
@@ -35,7 +36,8 @@ android {
 }
 
 dependencies {
-
+    implementation("com.firebaseui:firebase-ui-auth:8.0.0")
+    implementation ("com.google.firebase:firebase-auth:22.1.1")
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
@@ -47,3 +49,5 @@ dependencies {
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
+
+

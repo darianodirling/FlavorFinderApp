@@ -1,6 +1,24 @@
 <resources>
-    <string name="app_name">FlavorFinderApp</string>
 
+    <!-- App-specific strings -->
+    <string name="app_name">FlavorFinderApp</string>
+    <string name="google_ads_app_id">ca-app-pub-xxxxxxxxxxxxxxxx~yyyyyyyyyy</string>
+
+    <!-- Firebase configuration strings -->
+    <string name="google_app_id">1:739299444842:android:eaea68cd713f7d99da2213</string>
+    <string name="firebase_database_url">https://flavorfinderapp-1f3c1.firebaseio.com</string>
+    <string name="google_api_key">AIzaSyC1e_9G3uhylPXUjyqRJTZG_XaQqdVpvUM</string>
+    <string name="gcm_defaultSenderId">739299444842</string>
+    <string name="google_storage_bucket">flavorfinderapp-1f3c1.appspot.com</string>
+    <string name="project_id">flavorfinderapp-1f3c1</string>
+
+    <!-- Authentication messages -->
+    <string name="sign_in_message">Signing in...</string>
+    <string name="sign_out_message">Signing out...</string>
+    <string name="welcome_message">Welcome to Flavor Finder, %1$s!</string>
+    <string name="login_failed_message">Login failed. Please try again.</string>
+
+    <!-- Other app-specific strings -->
     <string name="home">Home</string>
     <string name="favorites">Favorites</string>
     <string name="login">Login</string>

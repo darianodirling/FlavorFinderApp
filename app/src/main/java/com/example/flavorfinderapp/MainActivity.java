@@ -11,6 +11,7 @@ import com.example.flavorfinderapp.ui.favorites.FavoritesFragment;
 import com.example.flavorfinderapp.ui.home.HomeFragment;
 import com.example.flavorfinderapp.ui.login.LoginFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.FirebaseApp;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -18,12 +19,16 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // Initialize Firebase
+        FirebaseApp.initializeApp(this);
+
         setContentView(R.layout.activity_main);
 
         BottomNavigationView bottomNav = findViewById(R.id.bottom_navigation);
         bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        // I'm assuming HomeFragment is the default fragment.
+        // Default fragment
         if (savedInstanceState == null) {
             getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                     new HomeFragment()).commit();
