@@ -1,6 +1,5 @@
 plugins {
     alias(libs.plugins.android.application)
-
 }
 
 android {
@@ -36,18 +35,30 @@ android {
 }
 
 dependencies {
+    // Firebase Authentication dependencies
     implementation("com.firebaseui:firebase-ui-auth:8.0.0")
-    implementation ("com.google.firebase:firebase-auth:22.1.1")
+    implementation("com.google.firebase:firebase-auth:22.1.1")
+
+    // Core AndroidX dependencies
     implementation(libs.appcompat)
     implementation(libs.material)
     implementation(libs.constraintlayout)
+
+    // Lifecycle components
     implementation(libs.lifecycle.livedata.ktx)
     implementation(libs.lifecycle.viewmodel.ktx)
+
+    // Navigation components
     implementation(libs.navigation.fragment)
     implementation(libs.navigation.ui)
+
+    // Retrofit and Gson dependencies for API calls
+    implementation("com.squareup.retrofit2:retrofit:2.9.0") // Retrofit library
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // Gson converter for Retrofit
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0") // Logging interceptor for debugging API calls
+
+    // Test dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
 }
-
-
