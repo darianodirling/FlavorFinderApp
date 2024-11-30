@@ -30,6 +30,27 @@ public class RecipeResponse {
         @SerializedName("url")
         private String url;
 
+        @SerializedName("calories")
+        private double calories;
+
+        @SerializedName("ingredientLines")
+        private List<String> ingredientLines;
+
+        @SerializedName("cuisineType")
+        private List<String> cuisineType;
+
+        @SerializedName("mealType")
+        private List<String> mealType;
+
+        @SerializedName("dishType")
+        private List<String> dishType;
+
+        @SerializedName("dietLabels")
+        private List<String> dietLabels;
+
+        @SerializedName("yield")
+        private int yield;
+
         public String getLabel() {
             return label;
         }
@@ -40,6 +61,34 @@ public class RecipeResponse {
 
         public String getUrl() {
             return url;
+        }
+
+        public double getCalories() {
+            return calories;
+        }
+
+        public List<String> getIngredientLines() {
+            return ingredientLines;
+        }
+
+        public List<String> getCuisineType() {
+            return cuisineType;
+        }
+
+        public List<String> getMealType() {
+            return mealType;
+        }
+
+        public List<String> getDishType() {
+            return dishType;
+        }
+
+        public List<String> getDietLabels() {
+            return dietLabels;
+        }
+
+        public int getYield() {
+            return yield;
         }
     }
 }
