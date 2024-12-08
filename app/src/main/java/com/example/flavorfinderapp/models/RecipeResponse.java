@@ -18,6 +18,11 @@ public class RecipeResponse {
         public Recipe getRecipe() {
             return recipe;
         }
+
+        // Added setter method for recipe
+        public void setRecipe(Recipe recipe) {
+            this.recipe = recipe;
+        }
     }
 
     public static class Recipe {
@@ -51,6 +56,7 @@ public class RecipeResponse {
         @SerializedName("yield")
         private int yield;
 
+        // Getters
         public String getLabel() {
             return label;
         }
@@ -89,6 +95,23 @@ public class RecipeResponse {
 
         public int getYield() {
             return yield;
+        }
+
+        // Setters
+        public void setLabel(String label) {
+            this.label = label;
+        }
+
+        public void setImage(String image) {
+            this.image = image;
+        }
+
+        public void setUrl(String url) {
+            this.url = url;
+        }
+
+        public void setCalories(double calories) {
+            this.calories = calories;
         }
     }
 }

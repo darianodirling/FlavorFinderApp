@@ -1,5 +1,6 @@
 plugins {
     alias(libs.plugins.android.application)
+    id("com.google.gms.google-services") // Google Services plugin for Firebase
 }
 
 android {
@@ -25,19 +26,28 @@ android {
             )
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
+
     buildFeatures {
         viewBinding = true
     }
 }
 
 dependencies {
-    // Firebase Authentication dependencies
+    // Firebase BOM (Bill of Materials) to manage versions consistently
+    implementation(platform("com.google.firebase:firebase-bom:32.7.0")) // Use the latest BOM version
+
+    // Firebase dependencies
+    implementation("com.google.firebase:firebase-auth")             // Firebase Authentication
+    implementation("com.google.firebase:firebase-firestore")         // Firebase Firestore
+    implementation("com.google.firebase:firebase-appcheck-playintegrity") // Firebase App Check
+
+    // Firebase UI for Authentication
     implementation("com.firebaseui:firebase-ui-auth:8.0.0")
-    implementation("com.google.firebase:firebase-auth:22.1.1")
 
     // Core AndroidX dependencies
     implementation(libs.appcompat)
@@ -53,15 +63,16 @@ dependencies {
     implementation(libs.navigation.ui)
 
     // Retrofit and Gson dependencies for API calls
-    implementation("com.squareup.retrofit2:retrofit:2.9.0") // Retrofit library
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0") // Gson converter for Retrofit
-    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0") // Logging interceptor for debugging API calls
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")          // Retrofit library
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")    // Gson converter for Retrofit
+    implementation("com.squareup.okhttp3:logging-interceptor:4.10.0") // Logging interceptor
+
+    // Glide for image loading
+    implementation("com.github.bumptech.glide:glide:4.14.2")
+    annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
 
     // Test dependencies
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-    implementation("com.github.bumptech.glide:glide:4.14.2")
-    annotationProcessor("com.github.bumptech.glide:compiler:4.14.2")
 }
